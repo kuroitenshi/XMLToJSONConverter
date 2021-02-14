@@ -10,7 +10,7 @@ public interface StorageService {
 
     void init();
 
-    void store(MultipartFile file);
+    void convertToJson(MultipartFile file);
 
     Stream<Path> loadAll();
 

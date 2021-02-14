@@ -46,13 +46,4 @@ public class XmlToJsonConverterApplicationTests {
 								"http://localhost/files/second.txt")));
 	}
 
-	@Test
-	public void shouldSaveUploadedFile() throws Exception {
-		MockMultipartFile multipartFile = new MockMultipartFile("file", "test.txt",
-				"text/plain", "Spring Framework".getBytes());
-		this.mvc.perform(multipart("/").file(multipartFile))
-				.andExpect(status().isFound())
-				.andExpect(header().string("Location", "/"));
-	}
-
 }
